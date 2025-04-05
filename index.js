@@ -31,6 +31,10 @@ const CategorySchema = new mongoose.Schema({
 
 const Category = mongoose.model('Category', CategorySchema);
 
+app.get('/' , (req , res) => {
+    res.send('reachOutPro');
+})
+
 // API to add new category with messages
 app.post('/add-Categories', async (req, res) => {
     const { category, messages = [] } = req.body;
